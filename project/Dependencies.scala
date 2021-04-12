@@ -18,6 +18,7 @@ object Dependencies {
   val akkaHttp       = "com.typesafe.akka"  %% "akka-http"               % akkaHttpVersion
   val akkaXml        = "com.typesafe.akka"  %% "akka-http-xml"           % "10.1.8"
   val alpAkkaXml     = "com.lightbend.akka" %% "akka-stream-alpakka-xml" % "1.0.0"
+  val aplakkaKafka   = "com.typesafe.akka"  %% "akka-stream-kafka"       % "2.0.7"
   val akkaHttpJson   = "com.typesafe.akka"  %% "akka-http-spray-json"    % akkaHttpVersion
   val typesafeConfig = "com.typesafe"       % "config"                   % "1.3.1"
 
@@ -94,9 +95,9 @@ object Dependencies {
   val sttpJson       = "com.softwaremill.sttp" %% "json4s"            % "1.5.11"
   val sttpNativeJson = "org.json4s"            %% "json4s-native"     % "3.6.0"
 
-  val kafkaClients = "org.apache.kafka" % "kafka-clients" % "0.10.2.1"
-  val kafkaStreams = "org.apache.kafka" % "kafka-streams" % "0.10.2.1"
-  val kafkaCore    = "org.apache.kafka" %% "kafka"        % "0.8.2.1"
+  val kafkaClients = "org.apache.kafka" % "kafka-clients" % "2.6.2"
+  val kafkaStreams = "org.apache.kafka" % "kafka-streams" % "2.6.2"
+  val kafkaCore    = "org.apache.kafka" %% "kafka"        % "2.6.2"
 
   val amazonKinesisClient   = "com.amazonaws" % "amazon-kinesis-client"   % "1.8.5"
   val amazonKinesisProducer = "com.amazonaws" % "amazon-kinesis-producer" % "0.12.5"
@@ -121,15 +122,21 @@ object Dependencies {
       akka25Actor,
       akkaXml,
       alpAkkaXml,
+      aplakkaKafka,
       akka25SLF4J,
       akkaStream,
       akkaHttp,
       apacheCommonsPool,
       akkaHttpJson,
       cats,
+      kafkaClients,
+      kafkaStreams,
+      kafkaCore,
       slf4j,
       request,
       catsEffects,
+      logbackClassic,
+      logbackLogstashEncoder,
       commonsLang3,
       scalaXml,
       http4s,

@@ -1,0 +1,17 @@
+<!--<configuration>-->
+
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS z(Z)} %level [%thread] %logger{36} %file:%line  %msg %ex%n</pattern>-->
+<!--        </encoder>-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>${stdout_level_threshold:-INHERITED}</level>-->
+<!--        </filter>-->
+<!--    </appender>-->
+<!--    <logger name="org.apache.kafka.streams" level="INFO" />-->
+<!--    <logger name="org.apache.kafka" level="ERROR" />-->
+<!--    &lt;!&ndash; Keep root level at INFO otherwise we will end up emitting way too much noise &ndash;&gt;-->
+<!--    <root level="DEBUG">-->
+<!--        <appender-ref ref="STDOUT" />-->
+<!--    </root>-->
+<!--</configuration>-->
